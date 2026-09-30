@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+/* Tailwind's preflight handles the reset. The Poppins import above is the only
+   thing the case-study components need from the host project's global CSS. */
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #404040;
+}
