@@ -1,11 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
 
-/* Tailwind's preflight handles the reset. The Poppins import above is the only
-   thing the case-study components need from the host project's global CSS. */
+/* Tailwind's preflight handles the reset. The font imports above and the page
+   canvas below are the only globals the case-study components rely on.
+
+   Type system: Poppins for display/headings (brand match), Inter for body copy
+   and UI — Inter reads better than Poppins at long-form paragraph sizes.
+   Canvas: #f5f5f0, the warm bone used on gwcdata.ai, with white cards on top. */
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #404040;
+  background: #f5f5f0;
+  color: #4a4552;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(112, 48, 177, 0.15);
 }

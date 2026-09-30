@@ -1,5 +1,5 @@
 /**
- * GWC x Sankalpa x Claude - Client Case Study
+ * Quantiva x Sankalpa x Vela - Client Case Study
  * Styled entirely with Tailwind utility classes (Tailwind v4, no config needed).
  * Drop the whole folder into any Tailwind-enabled React project and import it.
  *
@@ -8,12 +8,12 @@
  */
 
 const ui = {
-  shell: 'mx-auto w-full max-w-[1120px] px-6',
-  section: 'border-b border-[#e5e7eb] py-14 last:border-b-0',
-  kicker: 'mb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7030b1]',
+  shell: 'mx-auto w-full max-w-[1250px] px-6',
+  section: 'border-b border-[#e6e3dc] py-12 last:border-b-0 md:py-14',
+  kicker: 'mb-3 inline-flex items-center gap-2 rounded-full border border-[#7030B1]/15 bg-[#7030B1]/[0.06] px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-[#7030B1] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#EF6706] before:content-[""]',
   heading:
-    'mb-2.5 text-[clamp(22px,3vw,28px)] font-semibold leading-tight tracking-[-0.015em] text-[#1a1a1a]',
-  lead: 'mb-6 max-w-[74ch] text-[15.5px] text-[#6b7280]',
+    'mb-3 font-[Poppins,ui-sans-serif,system-ui,sans-serif] text-[clamp(23px,3.1vw,31px)] font-bold leading-[1.18] tracking-[-0.022em] text-[#14121a]',
+  lead: 'mb-6 max-w-[68ch] text-[15.5px] leading-[1.7] text-[#6f6a7a]',
   tick: 'mt-0.75 grid h-5 w-5 flex-none place-items-center rounded-full bg-[#7030b1]/10 text-[11px] font-bold text-[#7030b1]',
 }
 
@@ -103,7 +103,7 @@ const UNLOCKS = [
 
 const WHY_GWC = [
   {
-    title: 'Claude AI partner',
+    title: 'Vela AI partner',
     body: 'for advanced reasoning, document intelligence, and human-in-the-loop decision systems.',
   },
   {
@@ -124,12 +124,12 @@ function BulletList({ items, twoUp = false }) {
   return (
     <ul className={`grid gap-3.5 ${twoUp ? 'md:grid-cols-2 md:gap-x-7 md:gap-y-4' : ''}`}>
       {items.map((item) => (
-        <li key={item.title} className="flex items-start gap-3 text-[15px] text-[#404040]">
+        <li key={item.title} className="flex items-start gap-3 text-[15px] text-[#4a4552]">
           <span className={ui.tick} aria-hidden="true">
             &#10003;
           </span>
           <span>
-            <b className="font-semibold text-[#1a1a1a]">{item.title}:</b> {item.body}
+            <b className="font-semibold text-[#14121a]">{item.title}:</b> {item.body}
           </span>
         </li>
       ))}
@@ -139,22 +139,9 @@ function BulletList({ items, twoUp = false }) {
 
 export default function SankalpaCaseStudy() {
   return (
-    <article className="bg-white font-[Poppins,ui-sans-serif,system-ui,sans-serif] leading-relaxed text-[#404040] antialiased">
-      <header className={ui.shell}>
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#e5e7eb] py-4.5">
-          <div className="flex items-baseline gap-2.5">
-            <span className="text-[15px] font-extrabold uppercase tracking-[0.12em] text-[#7030b1]">
-              GWC Data.AI
-            </span>
-            <span className="text-xs tracking-[0.04em] text-[#6b7280]">Data. BI. Agentic AI.</span>
-          </div>
-          <span className="rounded-full border border-[#7030b1]/20 bg-[#7030b1]/[0.08] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6f2b8b]">
-            Client Case Study
-          </span>
-        </div>
-      </header>
+    <article className="bg-[#f5f5f0] font-[Inter,ui-sans-serif,system-ui,sans-serif] leading-relaxed text-[#4a4552] antialiased">
 
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#2b0f4d_0%,#6f2b8b_40%,#7030b1_75%,#8b35bc_100%)] pb-21 pt-19 text-white">
+      <section className="relative overflow-hidden bg-[linear-gradient(118deg,#2B0F4D_0%,#4A1772_38%,#6B2BAB_70%,#7030B1_100%)] pb-21 pt-19 text-white">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -left-[10%] -top-[40%] right-[60%] h-[460px] rounded-full bg-[radial-gradient(circle,rgba(251,191,36,0.18),transparent_70%)]"
@@ -165,10 +152,10 @@ export default function SankalpaCaseStudy() {
         />
         <div className={`relative z-10 ${ui.shell}`}>
           <span className="mb-5.5 inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.75 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/85">
-            Sankalpa &middot; Spiritual Tech Platform &middot; Powered by Claude
+            Sankalpa &middot; Spiritual Tech Platform &middot; Powered by Vela
           </span>
-          <h1 className="mb-2 max-w-[20ch] text-[clamp(30px,5vw,48px)] font-bold leading-[1.14] tracking-[-0.02em]">
-            Bringing Claude-powered Agents to spiritual technology at Sankalpa
+          <h1 className="font-[Poppins,ui-sans-serif,system-ui,sans-serif] mb-2 max-w-[20ch] text-[clamp(30px,5vw,48px)] font-bold leading-[1.14] tracking-[-0.02em]">
+            Bringing Vela-powered Agents to spiritual technology at Sankalpa
           </h1>
           <p className="max-w-[62ch] text-[clamp(15px,1.6vw,17.5px)] font-light text-white/85">
             Where ancient wisdom meets modern tech: pooja bookings, astrology, verified temples
@@ -192,13 +179,13 @@ export default function SankalpaCaseStudy() {
             <div className="mb-3.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7030b1]">
               In his own words
             </div>
-            <blockquote className="m-0 mb-4.5 text-[clamp(17px,2.2vw,21px)] leading-[1.5] tracking-[-0.01em] text-[#1a1a1a]">
-              &ldquo;Ancient wisdom deserves technology that treats it with care. GWC helped us
-              bring Claude into the heart of Sankalpa so that every recommendation, consultation, and
+            <blockquote className="m-0 mb-4.5 text-[clamp(17px,2.2vw,21px)] leading-[1.5] tracking-[-0.01em] text-[#14121a]">
+              &ldquo;Ancient wisdom deserves technology that treats it with care. Quantiva helped us
+              bring Vela into the heart of Sankalpa so that every recommendation, consultation, and
               piece of content reflects the tradition it comes from.&rdquo;
             </blockquote>
-            <figcaption className="text-sm text-[#6b7280]">
-              <b className="font-semibold text-[#1a1a1a]">Arvind Raghunathan</b>, Chief Experience
+            <figcaption className="text-sm text-[#6f6a7a]">
+              <b className="font-semibold text-[#14121a]">Arvind Raghunathan</b>, Chief Experience
               Officer, Sankalpa
             </figcaption>
           </figure>
@@ -207,11 +194,11 @@ export default function SankalpaCaseStudy() {
         <section className={ui.section}>
           <div className={ui.kicker}>What Sankalpa Needed</div>
           <h2 className={ui.heading}>Accuracy and trust, at the scale of a community</h2>
-          <BulletList items={NEEDS} />
+          <BulletList items={NEEDS} twoUp />
         </section>
 
         <section className={ui.section}>
-          <div className={ui.kicker}>The Agents GWC Built</div>
+          <div className={ui.kicker}>The Agents Quantiva Built</div>
           <h2 className={ui.heading}>
             Six agents across guidance, matching, booking and community
           </h2>
@@ -219,23 +206,23 @@ export default function SankalpaCaseStudy() {
             {AGENTS.map((agent) => (
               <div
                 key={agent.title}
-                className="rounded-2xl border border-[#e5e7eb] border-t-[3px] border-t-[#8c49bf] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_8px_24px_rgba(16,24,40,0.06)]"
+                className="rounded-2xl border border-[#e6e3dc] border-t-[3px] border-t-[#B56DD3] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(20,18,26,0.04),0_10px_30px_-12px_rgba(20,18,26,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_2px_4px_rgba(20,18,26,0.04),0_18px_44px_-14px_rgba(112,48,177,0.22)]"
               >
-                <h3 className="mb-2 text-[16.5px] font-semibold text-[#1a1a1a]">{agent.title}</h3>
-                <p className="text-sm text-[#6b7280]">{agent.body}</p>
+                <h3 className="mb-2 text-[16.5px] font-semibold text-[#14121a]">{agent.title}</h3>
+                <p className="text-sm text-[#6f6a7a]">{agent.body}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section className={ui.section}>
-          <div className={ui.kicker}>Why Claude as the Foundation Model</div>
+          <div className={ui.kicker}>Why Vela as the Foundation Model</div>
           <h2 className={ui.heading}>Built for a category where a wrong answer costs trust</h2>
           <BulletList items={WHY_CLAUDE} twoUp />
         </section>
 
         <section className={ui.section}>
-          <div className="rounded-2xl border border-[#e5e7eb] bg-[#fafafa] px-7.5 py-8">
+          <div className="rounded-2xl border border-[#e6e3dc] bg-white px-7.5 py-8">
             <div className={ui.kicker}>What This Unlocks for Sankalpa</div>
             <h2 className={ui.heading}>Scale that does not dilute the tradition</h2>
             <BulletList items={UNLOCKS} twoUp />
@@ -243,34 +230,28 @@ export default function SankalpaCaseStudy() {
         </section>
 
         <section className={ui.section}>
-          <div className={ui.kicker}>Why GWC</div>
+          <div className={ui.kicker}>Why Quantiva</div>
           <h2 className={ui.heading}>One partner, one accountability</h2>
           <BulletList items={WHY_GWC} twoUp />
         </section>
       </div>
 
-      <section className="bg-[linear-gradient(135deg,#2b0f4d,#7030b1_70%,#8b35bc_100%)] py-15 text-center text-white">
+      <section className="bg-[linear-gradient(120deg,#2B0F4D_0%,#6B2BAB_55%,#7030B1_100%)] py-15 text-center text-white">
         <div className={ui.shell}>
           <div className="mb-3.5 text-[clamp(20px,3.2vw,30px)] font-semibold tracking-[-0.015em]">
             Technology that treats ancient wisdom with care.
           </div>
           <a
-            href="https://www.gwcdata.ai"
+            href="https://www.quantivadata.ai"
             target="_blank"
             rel="noreferrer"
             className="border-b border-white/50 text-sm text-white no-underline"
           >
-            www.gwcdata.ai
+            www.quantivadata.ai
           </a>
         </div>
       </section>
 
-      <div className={ui.shell}>
-        <div className="flex flex-wrap justify-between gap-3 py-5.5 text-[12.5px] text-[#6b7280]">
-          <span>GWC Data.AI &middot; hello@gwcdata.ai &middot; www.gwcdata.ai</span>
-          <span>Data. BI. Agentic AI.</span>
-        </div>
-      </div>
     </article>
   )
 }

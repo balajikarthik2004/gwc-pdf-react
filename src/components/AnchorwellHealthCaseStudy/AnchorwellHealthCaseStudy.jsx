@@ -1,5 +1,5 @@
 /**
- * Anchorwell Health x GWC x Claude - Client Case Study
+ * Anchorwell Health x Quantiva x Vela - Client Case Study
  * Styled entirely with Tailwind utility classes (Tailwind v4, no config needed).
  * Drop the whole folder into any Tailwind-enabled React project and import it.
  *
@@ -8,20 +8,20 @@
  */
 
 const ui = {
-  shell: 'mx-auto w-full max-w-[1120px] px-6',
-  section: 'border-b border-[#e5e7eb] py-14 last:border-b-0',
-  kicker: 'mb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7030b1]',
+  shell: 'mx-auto w-full max-w-[1250px] px-6',
+  section: 'border-b border-[#e6e3dc] py-12 last:border-b-0 md:py-14',
+  kicker: 'mb-3 inline-flex items-center gap-2 rounded-full border border-[#7030B1]/15 bg-[#7030B1]/[0.06] px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-[#7030B1] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#EF6706] before:content-[""]',
   heading:
-    'mb-2.5 text-[clamp(22px,3vw,28px)] font-semibold leading-tight tracking-[-0.015em] text-[#1a1a1a]',
-  lead: 'mb-6 max-w-[74ch] text-[15.5px] text-[#6b7280]',
-  card: 'rounded-2xl border border-[#e5e7eb] bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_8px_24px_rgba(16,24,40,0.06)]',
+    'mb-3 font-[Poppins,ui-sans-serif,system-ui,sans-serif] text-[clamp(23px,3.1vw,31px)] font-bold leading-[1.18] tracking-[-0.022em] text-[#14121a]',
+  lead: 'mb-6 max-w-[68ch] text-[15.5px] leading-[1.7] text-[#6f6a7a]',
+  card: 'rounded-2xl border border-[#e6e3dc] bg-white p-6 shadow-[0_1px_2px_rgba(20,18,26,0.04),0_10px_30px_-12px_rgba(20,18,26,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#b56dd3]/40 hover:shadow-[0_2px_4px_rgba(20,18,26,0.04),0_18px_44px_-14px_rgba(112,48,177,0.22)]',
   tick: 'mt-0.75 grid h-5 w-5 flex-none place-items-center rounded-full bg-[#7030b1]/10 text-[11px] font-bold text-[#7030b1]',
 }
 
 const STATS = [
   { value: 'Every run', label: 'failed pipeline and cloud run explained, with a recommended fix' },
-  { value: 'Claude-first', label: 'engineering and data operations, with no manual log analysis' },
-  { value: 'Opus + Sonnet', label: 'multi-model orchestration now in development' },
+  { value: 'Vela-first', label: 'engineering and data operations, with no manual log analysis' },
+  { value: 'Vela Pro + Lite', label: 'multi-model orchestration now in development' },
 ]
 
 const NEEDS = [
@@ -67,8 +67,8 @@ const STEPS = [
 
 const ACROSS_ORG = [
   {
-    title: 'Claude-first engineering assistant',
-    body: 'Claude is part of day-to-day engineering and data work, from building to troubleshooting.',
+    title: 'Vela-first engineering assistant',
+    body: 'Vela is part of day-to-day engineering and data work, from building to troubleshooting.',
     status: 'Live',
   },
   {
@@ -78,7 +78,7 @@ const ACROSS_ORG = [
   },
   {
     title: 'Multi-model orchestration',
-    body: 'Routes work across Claude Opus and Sonnet, switching models when one is busy, with token-cost optimization built in.',
+    body: 'Routes work across Vela Pro and Vela Lite, switching models when one is busy, with token-cost optimization built in.',
     status: 'Next',
   },
 ]
@@ -113,7 +113,7 @@ const WHY_CLAUDE = [
   },
   {
     title: 'A range of models',
-    body: 'Opus for deep reasoning and Sonnet for speed and cost, enabling smart routing and cost control.',
+    body: 'Vela Pro for deep reasoning and Vela Lite for speed and cost, enabling smart routing and cost control.',
   },
   {
     title: 'Enterprise-grade',
@@ -124,7 +124,7 @@ const WHY_CLAUDE = [
 const WHY_GWC = [
   {
     title: 'Embedded engineering partner',
-    body: 'GWC engineers work inside the client’s data and cloud operations, building agents alongside their team.',
+    body: 'Quantiva engineers work inside the client’s data and cloud operations, building agents alongside their team.',
   },
   {
     title: 'Enterprise AI and data expertise',
@@ -144,12 +144,12 @@ function BulletList({ items, twoUp = false }) {
   return (
     <ul className={`grid gap-3.5 ${twoUp ? 'md:grid-cols-2 md:gap-x-7 md:gap-y-4' : ''}`}>
       {items.map((item) => (
-        <li key={item.title} className="flex items-start gap-3 text-[15px] text-[#404040]">
+        <li key={item.title} className="flex items-start gap-3 text-[15px] text-[#4a4552]">
           <span className={ui.tick} aria-hidden="true">
             &#10003;
           </span>
           <span>
-            <b className="font-semibold text-[#1a1a1a]">{item.title}:</b> {item.body}
+            <b className="font-semibold text-[#14121a]">{item.title}:</b> {item.body}
           </span>
         </li>
       ))}
@@ -159,35 +159,22 @@ function BulletList({ items, twoUp = false }) {
 
 export default function AnchorwellHealthCaseStudy() {
   return (
-    <article className="bg-white font-[Poppins,ui-sans-serif,system-ui,sans-serif] leading-relaxed text-[#404040] antialiased">
-      <header className={ui.shell}>
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#e5e7eb] py-4.5">
-          <div className="flex items-baseline gap-2.5">
-            <span className="text-[15px] font-extrabold uppercase tracking-[0.12em] text-[#7030b1]">
-              GWC Data.AI
-            </span>
-            <span className="text-xs tracking-[0.04em] text-[#6b7280]">Data. BI. Agentic AI.</span>
-          </div>
-          <span className="rounded-full border border-[#7030b1]/20 bg-[#7030b1]/[0.08] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6f2b8b]">
-            Client Case Study
-          </span>
-        </div>
-      </header>
+    <article className="bg-[#f5f5f0] font-[Inter,ui-sans-serif,system-ui,sans-serif] leading-relaxed text-[#4a4552] antialiased">
 
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#091b31_0%,#0846aa_45%,#7030b1_100%)] pb-20 pt-18 text-white">
+      <section className="relative overflow-hidden bg-[linear-gradient(118deg,#2B0F4D_0%,#4A1772_38%,#6B2BAB_70%,#7030B1_100%)] pb-20 pt-18 text-white">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-[60%] -right-[10%] left-[55%] h-[420px] rounded-full bg-[radial-gradient(circle,rgba(181,109,211,0.38),transparent_68%)]"
+          className="pointer-events-none absolute -bottom-[60%] -right-[10%] left-[55%] h-[420px] rounded-full bg-[radial-gradient(circle,rgba(181,109,211,0.5),transparent_68%)]"
         />
         <div className={`relative z-10 ${ui.shell}`}>
           <span className="mb-5.5 inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.75 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
-            Anchorwell Health &middot; Powered by Claude
+            Anchorwell Health &middot; Powered by Vela
           </span>
-          <h1 className="mb-4.5 max-w-[20ch] text-[clamp(30px,5vw,48px)] font-bold leading-[1.14] tracking-[-0.02em]">
-            Anchorwell Health | Claude-Powered Engineering &amp; Operations Intelligence
+          <h1 className="font-[Poppins,ui-sans-serif,system-ui,sans-serif] mb-4.5 max-w-[20ch] text-[clamp(30px,5vw,48px)] font-bold leading-[1.14] tracking-[-0.02em]">
+            Anchorwell Health | Vela-Powered Engineering &amp; Operations Intelligence
           </h1>
           <p className="max-w-[64ch] text-[clamp(15px,1.6vw,17.5px)] font-light text-white/85">
-            Using Claude to diagnose and fix data pipeline and cloud failures, power user-facing
+            Using Vela to diagnose and fix data pipeline and cloud failures, power user-facing
             insights, and build a resilient multi-model AI foundation.
           </p>
         </div>
@@ -198,12 +185,12 @@ export default function AnchorwellHealthCaseStudy() {
           {STATS.map((stat) => (
             <div
               key={stat.value}
-              className="rounded-2xl border border-[#e5e7eb] border-t-[3px] border-t-[#7030b1] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_8px_24px_rgba(16,24,40,0.06)]"
+              className="rounded-2xl border border-[#e6e3dc] border-t-[3px] border-t-[#B56DD3] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(20,18,26,0.04),0_10px_30px_-12px_rgba(20,18,26,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_2px_4px_rgba(20,18,26,0.04),0_18px_44px_-14px_rgba(112,48,177,0.22)]"
             >
               <div className="text-[clamp(20px,2.4vw,28px)] font-bold leading-tight tracking-[-0.02em] text-[#6f2b8b]">
                 {stat.value}
               </div>
-              <div className="mt-2 text-[13.5px] text-[#6b7280]">{stat.label}</div>
+              <div className="mt-2 text-[13.5px] text-[#6f6a7a]">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -211,39 +198,45 @@ export default function AnchorwellHealthCaseStudy() {
 
       <div className={ui.shell}>
         <section className={ui.section}>
-          <div className={ui.kicker}>The Client</div>
-          <h2 className={ui.heading}>Value-based care that depends on reliable data</h2>
-          <p className={ui.lead}>
-            Anchorwell Health is a healthcare organization focused on value-based care, where
+          <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+            <div>
+              <div className={ui.kicker}>The Client</div>
+              <h2 className={ui.heading}>
+                Value-based care that depends on reliable data
+              </h2>
+            </div>
+            <p className="text-[15.5px] leading-[1.75] text-[#6f6a7a]">
+              Anchorwell Health is a healthcare organization focused on value-based care, where
             outcomes depend on reliable data flowing across clinical, operational and financial
             systems. Its engineering and data teams run the pipelines and cloud infrastructure
-            behind that work, and Claude has become central to how they build, operate and support
-            their applications. GWC Data.AI works alongside these teams as an embedded engineering
+            behind that work, and Vela has become central to how they build, operate and support
+            their applications. Quantiva Data.AI works alongside these teams as an embedded engineering
             partner.
-          </p>
+            </p>
+          </div>
         </section>
 
         <section className={ui.section}>
           <div className={ui.kicker}>What Anchorwell Health Needed</div>
           <h2 className={ui.heading}>Less time in logs, more time building</h2>
-          <BulletList items={NEEDS} />
+          <BulletList items={NEEDS} twoUp />
         </section>
 
         <section className={ui.section}>
-          <div className={ui.kicker}>The Agent GWC Built</div>
+          <div className={ui.kicker}>The Agent Quantiva Built</div>
           <h2 className={ui.heading}>Pipeline &amp; cloud failure analysis agent</h2>
           <p className={ui.lead}>
             When a data pipeline or cloud job fails, engineers ask the agent what went wrong.
-            Claude investigates, explains the root cause and proposes the fix.
+            Vela investigates, explains the root cause and proposes the fix.
           </p>
           <div className="grid gap-4.5 md:grid-cols-3">
             {STEPS.map((step) => (
               <div key={step.num} className={ui.card}>
-                <div className="mb-3.5 grid h-8.5 w-8.5 place-items-center rounded-[10px] bg-[#7030b1] text-xs font-bold tracking-[0.1em] text-white">
+                <div className="mb-3.5 grid h-8.5 w-8.5 place-items-center rounded-[10px] bg-gradient-to-br from-[#7030B1] to-[#B56DD3] text-xs font-bold tracking-[0.1em] text-white">
                   {step.num}
                 </div>
-                <h3 className="mb-2 text-[17px] font-semibold text-[#1a1a1a]">{step.title}</h3>
-                <p className="text-sm text-[#6b7280]">{step.body}</p>
+                <h3 className="mb-2 text-[17px] font-semibold text-[#14121a]">{step.title}</h3>
+                <p className="text-sm text-[#6f6a7a]">{step.body}</p>
               </div>
             ))}
           </div>
@@ -253,11 +246,11 @@ export default function AnchorwellHealthCaseStudy() {
           <div className={ui.kicker}>Before &amp; After</div>
           <h2 className={ui.heading}>From hand-read logs to a cause and a fix</h2>
           <div className="grid gap-4.5 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#e5e7eb] bg-[#f3f4f6] px-5.5 py-6">
-              <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#6b7280]">
+            <div className="rounded-2xl border border-[#e6e3dc] bg-[#efeee7] px-5.5 py-6">
+              <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#6f6a7a]">
                 Before
               </div>
-              <p className="text-[14.5px] text-[#404040]">
+              <p className="text-[14.5px] text-[#4a4552]">
                 Engineers traced failures by reading through logs and error output by hand before
                 they could start on a fix.
               </p>
@@ -266,7 +259,7 @@ export default function AnchorwellHealthCaseStudy() {
               <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7030b1]">
                 After
               </div>
-              <p className="text-[14.5px] text-[#404040]">
+              <p className="text-[14.5px] text-[#4a4552]">
                 One prompt returns the cause and a recommended fix for every failed run, with no
                 manual log analysis.
               </p>
@@ -275,13 +268,13 @@ export default function AnchorwellHealthCaseStudy() {
         </section>
 
         <section className={ui.section}>
-          <div className={ui.kicker}>Claude Across the Organization</div>
+          <div className={ui.kicker}>Vela Across the Organization</div>
           <h2 className={ui.heading}>From engineering bench to end-user answers</h2>
           <div className="grid gap-4.5 md:grid-cols-3">
             {ACROSS_ORG.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl border border-[#e5e7eb] border-t-[3px] border-t-[#8c49bf] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_8px_24px_rgba(16,24,40,0.06)]"
+                className="rounded-2xl border border-[#e6e3dc] border-t-[3px] border-t-[#B56DD3] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(20,18,26,0.04),0_10px_30px_-12px_rgba(20,18,26,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_2px_4px_rgba(20,18,26,0.04),0_18px_44px_-14px_rgba(112,48,177,0.22)]"
               >
                 <span
                   className={`mb-3 inline-block rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
@@ -292,10 +285,10 @@ export default function AnchorwellHealthCaseStudy() {
                 >
                   {item.status}
                 </span>
-                <h3 className="mb-2 text-[16.5px] font-semibold leading-snug text-[#1a1a1a]">
+                <h3 className="mb-2 text-[16.5px] font-semibold leading-snug text-[#14121a]">
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#6b7280]">{item.body}</p>
+                <p className="text-sm text-[#6f6a7a]">{item.body}</p>
               </div>
             ))}
           </div>
@@ -310,12 +303,12 @@ export default function AnchorwellHealthCaseStudy() {
         <section className={ui.section}>
           <div className="grid gap-8 md:grid-cols-2 md:gap-10">
             <div>
-              <div className={ui.kicker}>Why Claude as the Foundation Model</div>
+              <div className={ui.kicker}>Why Vela as the Foundation Model</div>
               <h2 className={ui.heading}>Reasoning that reads the error output</h2>
               <BulletList items={WHY_CLAUDE} />
             </div>
             <div>
-              <div className={ui.kicker}>Why GWC</div>
+              <div className={ui.kicker}>Why Quantiva</div>
               <h2 className={ui.heading}>One partner, one accountability</h2>
               <BulletList items={WHY_GWC} />
             </div>
@@ -323,28 +316,22 @@ export default function AnchorwellHealthCaseStudy() {
         </section>
       </div>
 
-      <section className="bg-[linear-gradient(135deg,#6f2b8b,#0846aa_85%)] py-15 text-center text-white">
+      <section className="bg-[linear-gradient(120deg,#2B0F4D_0%,#6B2BAB_55%,#7030B1_100%)] py-15 text-center text-white">
         <div className={ui.shell}>
           <div className="mb-3.5 text-[clamp(20px,3.2vw,30px)] font-semibold tracking-[-0.015em]">
             Less time troubleshooting, more time delivering value-based care.
           </div>
           <a
-            href="https://www.gwcdata.ai"
+            href="https://www.quantivadata.ai"
             target="_blank"
             rel="noreferrer"
             className="border-b border-white/50 text-sm text-white no-underline"
           >
-            www.gwcdata.ai
+            www.quantivadata.ai
           </a>
         </div>
       </section>
 
-      <div className={ui.shell}>
-        <div className="flex flex-wrap justify-between gap-3 py-5.5 text-[12.5px] text-[#6b7280]">
-          <span>GWC Data.AI &middot; Solution Matters</span>
-          <span>Data. BI. Agentic AI.</span>
-        </div>
-      </div>
     </article>
   )
 }

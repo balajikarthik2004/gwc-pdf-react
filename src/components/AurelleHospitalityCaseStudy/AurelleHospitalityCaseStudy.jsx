@@ -1,5 +1,5 @@
 /**
- * Aurelle Hospitality Group x GWC x Claude - Client Case Study
+ * Aurelle Hospitality Group x Quantiva x Vela - Client Case Study
  * Styled entirely with Tailwind utility classes (Tailwind v4, no config needed).
  * Drop the whole folder into any Tailwind-enabled React project and import it.
  *
@@ -8,13 +8,13 @@
  */
 
 const ui = {
-  shell: 'mx-auto w-full max-w-[1120px] px-6',
-  section: 'border-b border-[#e5e7eb] py-14 last:border-b-0',
-  kicker: 'mb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7030b1]',
+  shell: 'mx-auto w-full max-w-[1250px] px-6',
+  section: 'border-b border-[#e6e3dc] py-12 last:border-b-0 md:py-14',
+  kicker: 'mb-3 inline-flex items-center gap-2 rounded-full border border-[#7030B1]/15 bg-[#7030B1]/[0.06] px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-[#7030B1] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#EF6706] before:content-[""]',
   heading:
-    'mb-2.5 text-[clamp(22px,3vw,28px)] font-semibold leading-tight tracking-[-0.015em] text-[#1a1a1a]',
-  lead: 'mb-6 max-w-[74ch] text-[15.5px] text-[#6b7280]',
-  card: 'rounded-2xl border border-[#e5e7eb] bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_8px_24px_rgba(16,24,40,0.06)]',
+    'mb-3 font-[Poppins,ui-sans-serif,system-ui,sans-serif] text-[clamp(23px,3.1vw,31px)] font-bold leading-[1.18] tracking-[-0.022em] text-[#14121a]',
+  lead: 'mb-6 max-w-[68ch] text-[15.5px] leading-[1.7] text-[#6f6a7a]',
+  card: 'rounded-2xl border border-[#e6e3dc] bg-white p-6 shadow-[0_1px_2px_rgba(20,18,26,0.04),0_10px_30px_-12px_rgba(20,18,26,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#b56dd3]/40 hover:shadow-[0_2px_4px_rgba(20,18,26,0.04),0_18px_44px_-14px_rgba(112,48,177,0.22)]',
   tick: 'mt-0.75 grid h-5 w-5 flex-none place-items-center rounded-full bg-[#7030b1]/10 text-[11px] font-bold text-[#7030b1]',
 }
 
@@ -51,12 +51,12 @@ const STEPS = [
   {
     num: '01',
     title: 'Upload',
-    body: 'Hotels upload one or more food and bar menu PDFs into the Domo application.',
+    body: 'Hotels upload one or more food and bar menu PDFs into the Lumina application.',
   },
   {
     num: '02',
     title: 'Parse',
-    body: 'Claude reads each menu in any language or layout and recognizes items named with synonyms.',
+    body: 'Vela reads each menu in any language or layout and recognizes items named with synonyms.',
   },
   {
     num: '03',
@@ -153,8 +153,8 @@ const WHY_GWC = [
     body: 'parsing, compliance checks and human-in-the-loop decision systems.',
   },
   {
-    title: 'Domo and pro-code expertise',
-    body: 'custom Domo applications and dashboards that put AI into everyday workflows.',
+    title: 'Lumina and pro-code expertise',
+    body: 'custom Lumina applications and dashboards that put AI into everyday workflows.',
   },
   {
     title: 'Innovation Lab',
@@ -170,12 +170,12 @@ function BulletList({ items, twoUp = false }) {
   return (
     <ul className={`grid gap-3.5 ${twoUp ? 'md:grid-cols-2 md:gap-x-7 md:gap-y-4' : ''}`}>
       {items.map((item) => (
-        <li key={item.title} className="flex items-start gap-3 text-[15px] text-[#404040]">
+        <li key={item.title} className="flex items-start gap-3 text-[15px] text-[#4a4552]">
           <span className={ui.tick} aria-hidden="true">
             &#10003;
           </span>
           <span>
-            <b className="font-semibold text-[#1a1a1a]">{item.title}:</b> {item.body}
+            <b className="font-semibold text-[#14121a]">{item.title}:</b> {item.body}
           </span>
         </li>
       ))}
@@ -185,35 +185,22 @@ function BulletList({ items, twoUp = false }) {
 
 export default function AurelleHospitalityCaseStudy() {
   return (
-    <article className="bg-white font-[Poppins,ui-sans-serif,system-ui,sans-serif] leading-relaxed text-[#404040] antialiased">
-      <header className={ui.shell}>
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#e5e7eb] py-4.5">
-          <div className="flex items-baseline gap-2.5">
-            <span className="text-[15px] font-extrabold uppercase tracking-[0.12em] text-[#7030b1]">
-              GWC Data.AI
-            </span>
-            <span className="text-xs tracking-[0.04em] text-[#6b7280]">Data. BI. Agentic AI.</span>
-          </div>
-          <span className="rounded-full border border-[#7030b1]/20 bg-[#7030b1]/[0.08] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6f2b8b]">
-            Client Case Study
-          </span>
-        </div>
-      </header>
+    <article className="bg-[#f5f5f0] font-[Inter,ui-sans-serif,system-ui,sans-serif] leading-relaxed text-[#4a4552] antialiased">
 
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0b1d56_0%,#0846aa_45%,#7030b1_100%)] pb-20 pt-18 text-white">
+      <section className="relative overflow-hidden bg-[linear-gradient(118deg,#2B0F4D_0%,#4A1772_38%,#6B2BAB_70%,#7030B1_100%)] pb-20 pt-18 text-white">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-[60%] -right-[10%] left-[55%] h-[420px] rounded-full bg-[radial-gradient(circle,rgba(181,109,211,0.38),transparent_68%)]"
+          className="pointer-events-none absolute -bottom-[60%] -right-[10%] left-[55%] h-[420px] rounded-full bg-[radial-gradient(circle,rgba(181,109,211,0.5),transparent_68%)]"
         />
         <div className={`relative z-10 ${ui.shell}`}>
           <span className="mb-5.5 inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.75 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
-            Aurelle Hospitality Group &middot; Powered by Claude &middot; Built on Domo
+            Aurelle Hospitality Group &middot; Powered by Vela &middot; Built on Lumina
           </span>
-          <h1 className="mb-4.5 max-w-[19ch] text-[clamp(30px,5vw,48px)] font-bold leading-[1.14] tracking-[-0.02em]">
+          <h1 className="font-[Poppins,ui-sans-serif,system-ui,sans-serif] mb-4.5 max-w-[19ch] text-[clamp(30px,5vw,48px)] font-bold leading-[1.14] tracking-[-0.02em]">
             Aurelle Hospitality Group | AI-Powered Menu Compliance for Restaurants &amp; Bars
           </h1>
           <p className="max-w-[62ch] text-[clamp(15px,1.6vw,17.5px)] font-light text-white/85">
-            A Claude-powered Domo application that reads food and bar menus, checks them against
+            A Vela-powered Lumina application that reads food and bar menus, checks them against
             each hotel&rsquo;s license, and approves, rejects or routes them for review.
           </p>
         </div>
@@ -224,12 +211,12 @@ export default function AurelleHospitalityCaseStudy() {
           {STATS.map((stat) => (
             <div
               key={stat.value}
-              className="rounded-2xl border border-[#e5e7eb] border-t-[3px] border-t-[#7030b1] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_8px_24px_rgba(16,24,40,0.06)]"
+              className="rounded-2xl border border-[#e6e3dc] border-t-[3px] border-t-[#B56DD3] bg-white px-5.5 py-6 shadow-[0_1px_2px_rgba(20,18,26,0.04),0_10px_30px_-12px_rgba(20,18,26,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_2px_4px_rgba(20,18,26,0.04),0_18px_44px_-14px_rgba(112,48,177,0.22)]"
             >
               <div className="text-[clamp(22px,2.6vw,30px)] font-bold leading-tight tracking-[-0.02em] text-[#6f2b8b]">
                 {stat.value}
               </div>
-              <div className="mt-2 text-[13.5px] text-[#6b7280]">{stat.label}</div>
+              <div className="mt-2 text-[13.5px] text-[#6f6a7a]">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -237,39 +224,45 @@ export default function AurelleHospitalityCaseStudy() {
 
       <div className={ui.shell}>
         <section className={ui.section}>
-          <div className={ui.kicker}>The Client</div>
-          <h2 className={ui.heading}>A global hospitality group with licensed menus in France</h2>
-          <p className={ui.lead}>
-            Aurelle Hospitality Group is headquartered in France, operating hotels,
+          <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+            <div>
+              <div className={ui.kicker}>The Client</div>
+              <h2 className={ui.heading}>
+                A global hospitality group with licensed menus in France
+              </h2>
+            </div>
+            <p className="text-[15.5px] leading-[1.75] text-[#6f6a7a]">
+              Aurelle Hospitality Group is headquartered in France, operating hotels,
             restaurants and bars across a broad portfolio of brands. In France, each hotel&rsquo;s
             restaurant and bar operates under a license that sets the mandatory and optional items
             its food and bar menus must include, and every menu has to be reviewed against those
-            terms. GWC Data.AI built a Claude-powered, pro-code application on Domo to digitize
+            terms. Quantiva Data.AI built a Vela-powered, pro-code application on Lumina to digitize
             that process.
-          </p>
+            </p>
+          </div>
         </section>
 
         <section className={ui.section}>
           <div className={ui.kicker}>What Aurelle Hospitality Group Needed</div>
           <h2 className={ui.heading}>Consistent checks on menus that arrive in any format</h2>
-          <BulletList items={NEEDS} />
+          <BulletList items={NEEDS} twoUp />
         </section>
 
         <section className={ui.section}>
-          <div className={ui.kicker}>The Application GWC Built</div>
-          <h2 className={ui.heading}>A menu compliance agent on Domo</h2>
+          <div className={ui.kicker}>The Application Quantiva Built</div>
+          <h2 className={ui.heading}>A menu compliance agent on Lumina</h2>
           <p className={ui.lead}>
-            A pro-code Domo application, powered by Claude, that turns unstructured menu PDFs into
+            A pro-code Lumina application, powered by Vela, that turns unstructured menu PDFs into
             license-checked, tracked decisions.
           </p>
           <div className="grid gap-4.5 sm:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((step) => (
               <div key={step.num} className={ui.card}>
-                <div className="mb-3.5 grid h-8.5 w-8.5 place-items-center rounded-[10px] bg-[#7030b1] text-xs font-bold tracking-[0.1em] text-white">
+                <div className="mb-3.5 grid h-8.5 w-8.5 place-items-center rounded-[10px] bg-gradient-to-br from-[#7030B1] to-[#B56DD3] text-xs font-bold tracking-[0.1em] text-white">
                   {step.num}
                 </div>
-                <h3 className="mb-2 text-[17px] font-semibold text-[#1a1a1a]">{step.title}</h3>
-                <p className="text-sm text-[#6b7280]">{step.body}</p>
+                <h3 className="mb-2 text-[17px] font-semibold text-[#14121a]">{step.title}</h3>
+                <p className="text-sm text-[#6f6a7a]">{step.body}</p>
               </div>
             ))}
           </div>
@@ -291,7 +284,7 @@ export default function AurelleHospitalityCaseStudy() {
                   <div className={`mt-2 text-[19px] font-semibold ${tone.verdict}`}>
                     {rail.verdict}
                   </div>
-                  <p className="mt-2 text-sm text-[#404040]">{rail.body}</p>
+                  <p className="mt-2 text-sm text-[#4a4552]">{rail.body}</p>
                 </div>
               )
             })}
@@ -302,11 +295,11 @@ export default function AurelleHospitalityCaseStudy() {
           <div className={ui.kicker}>Before &amp; After</div>
           <h2 className={ui.heading}>From hand-checked PDFs to tracked decisions</h2>
           <div className="grid gap-4.5 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#e5e7eb] bg-[#f3f4f6] px-5.5 py-6">
-              <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#6b7280]">
+            <div className="rounded-2xl border border-[#e6e3dc] bg-[#efeee7] px-5.5 py-6">
+              <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#6f6a7a]">
                 Before
               </div>
-              <p className="text-[14.5px] text-[#404040]">
+              <p className="text-[14.5px] text-[#4a4552]">
                 Hotels sent menus as PDFs and images, and admins reviewed each one by hand, often
                 in Excel, to approve or reject it.
               </p>
@@ -315,7 +308,7 @@ export default function AurelleHospitalityCaseStudy() {
               <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7030b1]">
                 After
               </div>
-              <p className="text-[14.5px] text-[#404040]">
+              <p className="text-[14.5px] text-[#4a4552]">
                 Menus are uploaded, checked and decided in one application, with reviewers focused
                 only on borderline cases and dashboards tracking every submission.
               </p>
@@ -332,12 +325,12 @@ export default function AurelleHospitalityCaseStudy() {
         <section className={ui.section}>
           <div className="grid gap-8 md:grid-cols-2 md:gap-10">
             <div>
-              <div className={ui.kicker}>Why Claude as the Foundation Model</div>
+              <div className={ui.kicker}>Why Vela as the Foundation Model</div>
               <h2 className={ui.heading}>Meaning, not keyword matching</h2>
               <BulletList items={WHY_CLAUDE} />
             </div>
             <div>
-              <div className={ui.kicker}>Why GWC</div>
+              <div className={ui.kicker}>Why Quantiva</div>
               <h2 className={ui.heading}>One partner, one accountability</h2>
               <BulletList items={WHY_GWC} />
             </div>
@@ -345,28 +338,22 @@ export default function AurelleHospitalityCaseStudy() {
         </section>
       </div>
 
-      <section className="bg-[linear-gradient(135deg,#6f2b8b,#0846aa_85%)] py-15 text-center text-white">
+      <section className="bg-[linear-gradient(120deg,#2B0F4D_0%,#6B2BAB_55%,#7030B1_100%)] py-15 text-center text-white">
         <div className={ui.shell}>
           <div className="mb-3.5 text-[clamp(20px,3.2vw,30px)] font-semibold tracking-[-0.015em]">
             Every menu checked, every decision tracked.
           </div>
           <a
-            href="https://www.gwcdata.ai"
+            href="https://www.quantivadata.ai"
             target="_blank"
             rel="noreferrer"
             className="border-b border-white/50 text-sm text-white no-underline"
           >
-            www.gwcdata.ai
+            www.quantivadata.ai
           </a>
         </div>
       </section>
 
-      <div className={ui.shell}>
-        <div className="flex flex-wrap justify-between gap-3 py-5.5 text-[12.5px] text-[#6b7280]">
-          <span>GWC Data.AI &middot; Solution Matters</span>
-          <span>Data. BI. Agentic AI.</span>
-        </div>
-      </div>
     </article>
   )
 }
